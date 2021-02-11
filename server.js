@@ -13,13 +13,11 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-const databaseUrl = "workout";
-const collections = ["workouts"];
-
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/still-sea-00864",
   {
     useNewUrlParser: true,
+    useCreateIndex: true,
     useUnifiedTopology: true,
   }
 );
