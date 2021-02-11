@@ -121,7 +121,7 @@ async function handleFormSubmit(event) {
 function handleToastAnimationEnd() {
   toast.removeAttribute("class");
   if (shouldNavigateAway) {
-    location.href = "/index";
+    location.href = "/";
   }
 }
 
