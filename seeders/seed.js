@@ -1,13 +1,10 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/still-sea-00864",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 let workoutSeed = [
   {
